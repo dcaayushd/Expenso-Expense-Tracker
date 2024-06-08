@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:expenso_expense_tracker/data/data.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -215,9 +216,7 @@ class MainScreen extends StatelessWidget {
                   )
                 ],
               ),
-            ),
-
-
+            ), 
             const SizedBox(height: 40),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -248,7 +247,7 @@ class MainScreen extends StatelessWidget {
             const SizedBox(height: 20),
             Expanded(
               child: ListView.builder(
-                itemCount: 3,
+                itemCount: transactionsData.length,
                 itemBuilder: (context, int i) {
                   return Padding(
                     padding: const EdgeInsets.only(bottom: 16.0),
@@ -271,21 +270,23 @@ class MainScreen extends StatelessWidget {
                                       height: 50,
                                       width: 50,
                                       decoration: BoxDecoration(
-                                        color: Colors.yellow[700],
+                                        color: transactionsData[i]['color'],
                                         shape: BoxShape.circle,
                                       ),
                                     ),
-                                    const Icon(
-                                      CupertinoIcons.book,
-                                      color: Colors.white,
-                                    ),
+                                    transactionsData[i]['icon'],
+
+                                    // const Icon(
+                                    //   CupertinoIcons.book,
+                                    //   color: Colors.white,
+                                    // ),
                                   ],
                                 ),
                                 const SizedBox(
                                   width: 12,
                                 ),
                                 Text(
-                                  'Books',
+                                  transactionsData[i]['name'],
                                   style: TextStyle(
                                     fontSize: 14,
                                     color: Theme.of(context)
@@ -300,7 +301,7 @@ class MainScreen extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
                                 Text(
-                                  '-Rs. 1500',
+                                  transactionsData[i]['totalAmount'],
                                   style: TextStyle(
                                     fontSize: 14,
                                     color: Theme.of(context)
@@ -310,7 +311,7 @@ class MainScreen extends StatelessWidget {
                                   ),
                                 ),
                                 Text(
-                                  'Today',
+                                  transactionsData[i]['date'],
                                   style: TextStyle(
                                     fontSize: 14,
                                     color:
@@ -328,7 +329,6 @@ class MainScreen extends StatelessWidget {
                 },
               ),
             ),
-
           ],
         ),
       ),
