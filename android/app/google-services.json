@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "880389850928",
+    "project_id": "expenso-e4e26",
+    "storage_bucket": "expenso-e4e26.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:880389850928:android:d0c9710acdf41605556af5",
+        "android_client_info": {
+          "package_name": "com.dcaayush.codes.expenso_expense_track"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbR6BaYBLq-097IyWCSJKQWIitnlXVUmw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
