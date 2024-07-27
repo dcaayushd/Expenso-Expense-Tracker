@@ -57,7 +57,7 @@ class MainScreen extends StatelessWidget {
                           style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
-                              color: Theme.of(context).colorScheme.onBackground),
+                              color: Theme.of(context).colorScheme.onSurface),
                         )
                       ],
                     ),
@@ -201,7 +201,7 @@ class MainScreen extends StatelessWidget {
                   'Transactions',
                   style: TextStyle(
                       fontSize: 16,
-                      color: Theme.of(context).colorScheme.background,
+                      color: Theme.of(context).colorScheme.surface,
                       fontWeight: FontWeight.bold),
                 ),
                 GestureDetector(
